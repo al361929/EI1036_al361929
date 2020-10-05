@@ -1,0 +1,46 @@
+1. 
+La diferencia es que al ejecutarlo en consola te aparece el print que contiene las etiquetas del html, en cambio al lanzarlo en el servidor se muestra correctamente el texto con el formato html indicado.
+
+2. 
+PHP 7.4.3
+
+3. 
+Al introducir la URL aparece: Hola, Ana FIN. En la consola nos aparece el mensaje de que el servidor ha realizado un GET del fichero requerido:
+
+[Mon Sep 28 15:58:55 2020] 127.0.0.1:45916 Accepted
+[Mon Sep 28 15:58:55 2020] 127.0.0.1:45916 [200]: GET /holaMundo.php
+
+4.
+La versión pirtuletas es 7.2.31 y la versión lanzada en mi pc es 7.4.3
+
+Las diferencias más significativas que he encontrado es:
+- El server API es diferente, en piruletas es Apache 2.0 Handler y en el servidor lanzado en mi pc es Built-in HTTP Server.
+
+-La configuración mostrada es completamente diferente, en cada servidor aparece la configuración del tipo de servidor correspondiente.
+
+- En el apartado de Environment hay una gran diferencia, en el servidor lanzado en apache solo muestra un par de datos como el directorio temporal o el path y en el otro servidor aparece todo tipo de información relacionada con el usuario que ha lanzadoe el servidor.
+
+5. 
+https://github.com/al361929/EI1036_al361929
+
+6.
+En el documento portal0.php aparece un código formado por diferentes fragmentos de hmtl que se almacenan en la carpeta partials. Con estos elmentos ordenadas de forma correcta se forma la página web. El fichero header.php muestra la imagen y el logo de la Asociación de Consumidores de Comercio Electrónico. A este fichero le sigue el menu.php el cual muestra el menú de las diferentes acciones disponibles para realizar. Posteriormente tenemos el fichero login.php que viene dado por la variable $central, lo que muestra también las diferentes posibilidades que tenemos para referenciar a los ficheros. En este fichero aparece un formulario de inicio de sesión el cual está dentro de un fieldset. Por último tenemos el footer donde aparece diferente información como el autor de la web.
+
+7.
+Te lleva a la web datosForm.php y muestra todas las variables globales. Recibe las variables que se rellenan en el formulario que son "nombre" y "passwd".
+
+8.
+Si enviamos el formulario sin rellenar la variable "nombre" se quedará vacía, en cambio la variable "passwd" tiene el valor "xxxx" que es el valor que aparece predeterminado en el formulario ya que en el input aparece: value="xxxx".
+
+9.
+portal.php?action=home&nombre=usuario
+portal.php?action=login
+portal.php?action=registro
+portal.php?action=listar
+
+La variable global que almacena la accion a realizar es $action
+
+10.
+He modificado los parámetros para poder acceder a la base de datos que acabo de crear
+
+11.
