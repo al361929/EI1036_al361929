@@ -2,13 +2,13 @@
         header('Content-Type: application/json');
 
 /** The name of the database */
-define('DB_NAME', 'ei1036_42');
+define('DB_NAME', 'al361929_ei1036_42');
 
 /** MySQL database username */
-define('DB_USER', '*****');
+define('DB_USER', 'al361929');
 
 /** MySQL database password */
-define('DB_PASSWORD', '*****');
+define('DB_PASSWORD', '*25061998_');
 
 /** MySQL hostname */
 define('DB_HOST', 'db-aules.uji.es' );
@@ -41,8 +41,8 @@ $query="CREATE TABLE IF NOT EXISTS  $table (client_id SERIAL PRIMARY KEY, name C
 echo $query;
 
 $a=ejecutarSQL($pdo,$table,$query,[]);
-$query = "INSERT INTO $table (name,surname) VALUES (?,?)";
-$a=ejecutarSQL($pdo,$table,$query,['user4','pp']);
+$query = "INSERT INTO $table (nombre, apellidos, direccion, ciudad, cp, foto) VALUES (?,?,?,?,?,?)";
+$a=ejecutarSQL($pdo,$table,$query,[$_REQUEST['userName'], $_REQUEST['surname'],$_REQUEST['address'],$_REQUEST['city'],$_REQUEST['zip_code'],$_REQUEST['foto_file']]);
 
 if (1>$a) {echo "InCorrecto1";}
 

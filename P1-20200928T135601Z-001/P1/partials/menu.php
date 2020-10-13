@@ -6,15 +6,12 @@
 		<li>
 			<a href="crearTabla.php">CrearTabla</a>
 		</li>
-		
-
 		<li>
 			<a href="?action=login">Autentificar</a>
 		</li>
 		<li>
 			<a href="?action=registro">Registro</a>
 		</li>
-
 		<li>
 			<a href="?action=listar">Listar</a>
 		</li>

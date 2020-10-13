@@ -49,6 +49,9 @@ switch ($action) {
             print "</table>";
         }
         break;
+    case "registrar":
+        $central = "/includes/registrar.php";
+        break;
     default:
         $data["error"] = "Accion No permitida";
         $central = "/holaMundo.php";
