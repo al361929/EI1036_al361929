@@ -8,12 +8,11 @@ function handler($pdo,$table)
         $data["error"] = "No has rellenado el formulario correctamente";
         return;
     }
-    $query = "INSERT INTO $table (nombre, apellidos, direccion, ciudad, cp, foto)
+    $query = "INSERT INTO     $table (nombre, apellidos, direccion, ciudad, cp, foto)
                         VALUES (?,?,?,?,?,?)";
                        
     echo $query;
     try { 
-        echo ($_REQUEST['userName']);
         $a=array($_REQUEST['userName'], $_REQUEST['surname'],$_REQUEST['address'],$_REQUEST['city'],$_REQUEST['zip_code'],$_REQUEST['foto_file']);
         print_r ($a);
         $consult = $pdo->prepare($query);
